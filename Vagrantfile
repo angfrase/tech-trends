@@ -10,9 +10,18 @@ Vagrant.configure("2") do |config|
 
   # st the static IP for the vagrant box
   config.vm.network "private_network", ip: "192.168.50.4"
+
+  # Explicitly enable rsync between the guest and host
+  config.vm.synced_folder ".", "/vagrant", type: "rsync"
   
   # configure port forwarding
   config.vm.network "forwarded_port", guest: 7111, host: 7111
+
+  # Configure docker service to run when the machine boots
+  config.vm.provision "shell", inline: <<-SHELL
+    sudo systemctl enable docker
+    sudo systemctl start docker
+  SHELL
 
   # consifure the parameters for VirtualBox provider
   config.vm.provider "virtualbox" do |vb|
