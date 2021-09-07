@@ -18,19 +18,21 @@ sudo docker logs -f techtrends
    Use a production WSGI server instead.
  * Debug mode: off
 INFO:werkzeug: * Running on http://0.0.0.0:3111/ (Press CTRL+C to quit)
-INFO:werkzeug:10.0.2.2 - - [07/Sep/2021 08:48:36] "GET / HTTP/1.1" 200 -
-INFO:root:Article "2020 CNCF Annual Report" retrieved!
-INFO:werkzeug:10.0.2.2 - - [07/Sep/2021 08:51:20] "GET /1 HTTP/1.1" 200 -
-INFO:werkzeug:10.0.2.2 - - [07/Sep/2021 08:51:21] "GET / HTTP/1.1" 200 -
-INFO:root:"About Us" page was retrieved
-INFO:werkzeug:10.0.2.2 - - [07/Sep/2021 08:51:23] "GET /about HTTP/1.1" 200 -
-INFO:werkzeug:10.0.2.2 - - [07/Sep/2021 08:51:24] "GET / HTTP/1.1" 200 -
-INFO:root:Article "Kubernetes v1.20 Release Notes" retrieved!
-INFO:werkzeug:10.0.2.2 - - [07/Sep/2021 08:51:26] "GET /3 HTTP/1.1" 200 -
-INFO:werkzeug:10.0.2.2 - - [07/Sep/2021 08:51:27] "GET / HTTP/1.1" 200 -
-INFO:werkzeug:10.0.2.2 - - [07/Sep/2021 08:51:32] "GET /healthz HTTP/1.1" 200 -
-INFO:werkzeug:10.0.2.2 - - [07/Sep/2021 08:51:38] "GET /metrics HTTP/1.1" 200 -
-INFO:werkzeug:10.0.2.2 - - [07/Sep/2021 08:53:48] "GET /create HTTP/1.1" 200 -
-INFO:root:Article "Cloud Native Application Archtectute Nanodegree" created
-INFO:werkzeug:10.0.2.2 - - [07/Sep/2021 08:54:53] "POST /create HTTP/1.1" 302 -
-INFO:werkzeug:10.0.2.2 - - [07/Sep/2021 08:54:53] "GET / HTTP/1.1" 200 -
+INFO:root:2021-09-07 14:30:20.314539 | Article "2020 CNCF Annual Report" retrieved!
+INFO:werkzeug:192.168.50.1 - - [07/Sep/2021 14:30:20] "GET /1 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.50.1 - - [07/Sep/2021 14:30:21] "GET / HTTP/1.1" 200 -
+INFO:root:2021-09-07 14:30:23.764948 | Article "Kubernetes Certification" retrieved!
+INFO:werkzeug:192.168.50.1 - - [07/Sep/2021 14:30:23] "GET /6 HTTP/1.1" 200 -
+INFO:root:2021-09-07 14:30:25.718095 | "About Us" page was retrieved
+INFO:werkzeug:192.168.50.1 - - [07/Sep/2021 14:30:25] "GET /about HTTP/1.1" 200 -
+INFO:werkzeug:192.168.50.1 - - [07/Sep/2021 14:30:26] "GET /create HTTP/1.1" 200 -
+INFO:root:2021-09-07 14:30:44.797399 | Article "Cloud Native Application Archtectute Nanodegree" created
+INFO:werkzeug:192.168.50.1 - - [07/Sep/2021 14:30:44] "POST /create HTTP/1.1" 302 -
+INFO:werkzeug:192.168.50.1 - - [07/Sep/2021 14:30:44] "GET / HTTP/1.1" 200 -
+ERROR:root:2021-09-07 14:30:57.016170 | Article with id 50 does not exists
+INFO:werkzeug:192.168.50.1 - - [07/Sep/2021 14:30:57] "GET /50 HTTP/1.1" 404 -
+INFO:werkzeug:192.168.50.1 - - [07/Sep/2021 14:31:05] "GET /healthz HTTP/1.1" 200 -
+INFO:werkzeug:192.168.50.1 - - [07/Sep/2021 14:31:12] "GET /metrics HTTP/1.1" 200 -
+INFO:werkzeug:192.168.50.1 - - [07/Sep/2021 14:31:17] "GET / HTTP/1.1" 200 -
+INFO:root:2021-09-07 14:31:20.056078 | Article "Cloud Native Application Archtectute Nanodegree" retrieved!
+INFO:werkzeug:192.168.50.1 - - [07/Sep/2021 14:31:20] "GET /7 HTTP/1.1" 200 -
