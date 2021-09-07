@@ -1,0 +1,9 @@
+apiVersion: v1
+name: techtrends
+description: Techtrends project - Cloud Native Applications Architectures Nanodegree.
+keywords:
+  - techtrends
+version: 1.0.0
+maintainers:
+  - name: Angela
+    email: Angfrase@mail.io
