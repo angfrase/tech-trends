@@ -48,18 +48,19 @@ def index():
 def post(post_id):
     post = get_post(post_id)
     if post is None:
-        logging.error('Article with id {} does not exists'.format(post_id))
+        logging.error('%s | Article with id %s does not exists',
+                      datetime.now(), post_id)
         return render_template('404.html'), 404
     else:
         title = post['title']
-        logging.info('Article "{}" retrieved!'.format(title))
+        logging.info('%s | Article "%s" retrieved!', datetime.now(), title)
         return render_template('post.html', post=post)
 
 
 # Define the About Us page
 @app.route('/about')
 def about():
-    logging.info('"About Us" page was retrieved')
+    logging.info('%s | "About Us" page was retrieved', datetime.now())
     return render_template('about.html')
 
 
@@ -78,7 +79,7 @@ def create():
                                (title, content))
             connection.commit()
             connection.close()
-            logging.info('Article "{}" created'.format(title))
+            logging.info('%s | Article "{}" created', datetime.now(), title)
             return redirect(url_for('index'))
 
     return render_template('create.html')
