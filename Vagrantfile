@@ -12,8 +12,7 @@ Vagrant.configure("2") do |config|
   config.vm.network "private_network", ip: "192.168.50.4"
 
   # Explicitly enable rsync between the guest and host
-  config.vm.synced_folder ".", "/vagrant", type: "rsync", 
-  rsync__args: ["--verbose", "--rsync-path='sudo rsync'", "--archive", "--delete", "-z"]
+  config.vm.synced_folder ".", "/vagrant", type: "rsync", rsync__exclude: [".vagrant"]
 
   
   # configure port forwarding
