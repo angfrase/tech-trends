@@ -113,6 +113,11 @@ def metrics():
     return app.response_class(status=200, response=json.dumps(data), mimetype='application/json')
 
 
+@app.route('/ribo')
+def ribo():
+    return render_template('ribo.html')
+
+
 # start the application on port 3111
 if __name__ == "__main__":
     # Logging configuration
