@@ -1,5 +1,7 @@
 FROM python:2.7-alpine
 
+RUN echo "Hello World"
+
 COPY ./techtrends/ /app/
 
 WORKDIR /app
